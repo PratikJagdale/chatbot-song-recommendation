@@ -13,7 +13,7 @@ const ChatBox = () => {
     const [messeges,setMesseges]=React.useState([
         {
             type:"reciver",
-            message:"What's on Your Mind??"
+            message:"What's on your mind?"
         }
     ])
 
@@ -92,7 +92,7 @@ const ChatBox = () => {
             <img src={sendChatBtn} onClick={handelMessegeToBeSent} ref={chatbotin} alt="sendBTN"/>
             </div>
             <div className='chatBox__Recommend_Button' onClick={recommend}>
-            Recommend 
+            Recommend!
             </div>
         </div>
     )
