@@ -26,7 +26,8 @@ const ChatBox = () => {
             }
         }
         const emotion=await axios.post("https://chatbot-song-recommendation.herokuapp.com/emotion/emotionAnalysis",{
-            lastmsg:lastmsgr
+            lastmsg:lastmsgr,
+            
         })
         dispatch(emotionActions(emotion.data.emotion))
     }
@@ -38,7 +39,8 @@ const ChatBox = () => {
             "message":currentChat
         }])
         const {data}= await axios.post('https://chatbot-song-recommendation.herokuapp.com/chatBot/newMessegeToBot',{
-            newmsg:currentChat
+            newmsg:currentChat,
+            id:localStorage.getItem("id")
         })
         setMesseges(oldArray => [...oldArray,{
             type:"reciver",
