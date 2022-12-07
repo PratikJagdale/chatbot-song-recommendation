@@ -9,7 +9,7 @@ const SongsList = () => {
     const emotion=useSelector((state)=>state.SetMessageReducer)
     console.log(emotion)
     const fetchSongsForEmotions=async(emotion)=>{
-        let {data}=await axios.post("https://chatbot-song-recommendation.herokuapp.com/emotionsongs/getSongs",{
+        let {data}=await axios.post("https://chatbotsong.onrender.com/emotionsongs/getSongs",{
                 "emotion":emotion
         })
         setSongs([])
