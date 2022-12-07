@@ -25,7 +25,7 @@ const ChatBox = () => {
                 break;
             }
         }
-        const emotion=await axios.post("https://chatbot-song-recommendation.herokuapp.com/emotion/emotionAnalysis",{
+        const emotion=await axios.post("https://chatbotsong.onrender.com/emotion/emotionAnalysis",{
             lastmsg:lastmsgr,
             
         })
@@ -38,7 +38,7 @@ const ChatBox = () => {
             type:"sender",
             "message":currentChat
         }])
-        const {data}= await axios.post('https://chatbot-song-recommendation.herokuapp.com/chatBot/newMessegeToBot',{
+        const {data}= await axios.post('https://chatbotsong.onrender.com/chatBot/newMessegeToBot',{
             newmsg:currentChat,
             id:localStorage.getItem("id")
         })
